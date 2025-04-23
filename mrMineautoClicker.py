@@ -78,6 +78,26 @@ def sell_material():
         pydirectinput.doubleClick(620,750)#press Sell
         time.sleep(0.5)
 
+def checkReactorColour():
+    x_coord, y_coord = 1815, 697
+    watch_duration = 1.1  # seconds
+    check_interval = 0.05  # check every 50ms 
+
+    start_time = time.time()
+    initial_color = (  0, 255,  0)
+
+    while time.time() - start_time < watch_duration:
+        current_color = pyautogui.pixel(x_coord, y_coord)
+        if current_color != initial_color:
+            return True  # Color changed during watch time
+        time.sleep(check_interval)
+
+    return False
+
+def reactorRechage():
+    click(1060,890)
+    click(1000,750)
+    click(777,675)
 
 def main_body(x):
     colector(x)
@@ -90,20 +110,36 @@ def main_body(x):
     time.sleep(0.3)
     click(770,645)
     time.sleep(0.3)
+    pyautogui.press("b")
+    time.sleep(0.4)
+    click(802,490)
+    click(802,490)
+    pyautogui.press('esc')
+    time.sleep(0.3)
+    if checkReactorColour():
+        pyautogui.press("r")
+        reactorRechage()
+        time.sleep(0.3)
+        pydirectinput.keyDown('shift')
+        time.sleep(0.3)
+        for p in range (28):
+            click(595,575)
+        pydirectinput.keyUp('shift')
+        time.sleep(0.3)
     
-running = False 
+# running = False 
 
-def toggle_clicker():
-    """Toggle the auto clicker on/off."""
-    global running
-    running = not running
-    print(f"Auto clicker {'started' if running else 'stopped'}.")
+# def toggle_clicker():
+#     """Toggle the auto clicker on/off."""
+#     global running
+#     running = not running
+#     print(f"Auto clicker {'started' if running else 'stopped'}.")
     
-keyboard.add_hotkey("F6", toggle_clicker)  # Press F6 to toggle
+# keyboard.add_hotkey("F6", toggle_clicker)  # Press F6 to toggle
 
 def main(num,x):
-    toggle_clicker()
-    keyboard.add_hotkey("F6", toggle_clicker)
+    # toggle_clicker()
+    # keyboard.add_hotkey("F6", toggle_clicker)
     if num == 1:
         while keyboard.is_pressed('z') == False:
             main_body(x)
