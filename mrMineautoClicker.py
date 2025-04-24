@@ -113,7 +113,11 @@ def main_body(x):
     pyautogui.press("b")
     time.sleep(0.4)
     click(802,490)
+    time.sleep(0.3)
     click(802,490)
+    time.sleep(0.5)
+    click(1100,730)
+    time.sleep(0.2)
     pyautogui.press('esc')
     time.sleep(0.3)
     if checkReactorColour():
@@ -146,4 +150,4 @@ def main(num,x):
     else :
         main_body()
 
-main(1,1)
+main(1,2)
