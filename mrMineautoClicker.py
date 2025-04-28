@@ -1,12 +1,9 @@
 from pynput.mouse import Button, Controller
 from pynput.keyboard import Listener, KeyCode
 from pyautogui import *
-import time
-import threading
-import pynput    
+import time  
 import pyautogui
 import keyboard 
-import random
 import win32api, win32con
 import pydirectinput
 
@@ -59,15 +56,15 @@ def collect_wild_chest():
     b = 0
     for b in range (4):
         pydirectinput.press('space')
-        time.sleep(0.4)
+        time.sleep(0.2)
         pydirectinput.keyDown('shift')
-        time.sleep(0.3)
+        time.sleep(0.2)
         click(1500,585)
-        time.sleep(0.3)
+        time.sleep(0.2)
         click(1500,585)
-        time.sleep(0.3)
+        time.sleep(0.2)
         pydirectinput.keyUp('shift')
-        time.sleep(0.5)
+        time.sleep(0.2)
     
     
 def sell_material():
@@ -95,9 +92,24 @@ def checkReactorColour():
     return False
 
 def reactorRechage():
-    click(1060,890)
-    click(1000,750)
-    click(777,675)
+    pydirectinput.doubleClick(1060,890)
+    time.sleep(0.8)
+    pydirectinput.doubleClick(1000,750)
+    time.sleep(0.8)
+    pydirectinput.doubleClick(777,675)
+    time.sleep(0.8)
+
+def superminer():
+    click(1830,290)
+    time.sleep(0.8)
+    click(830,735)
+    time.sleep(0.8)
+    click(767,756)
+    time.sleep(0.3)
+    click(1200,175)
+    time.sleep(0.8)
+    click(1400,225)
+    time.sleep(0.5)
 
 def main_body(x):
     colector(x)
@@ -117,11 +129,21 @@ def main_body(x):
     click(802,490)
     time.sleep(0.5)
     click(1100,730)
-    time.sleep(0.2)
+    time.sleep(0.3)
+    click(1100,730)
+    time.sleep(0.3)
     pyautogui.press('esc')
     time.sleep(0.3)
+    superminer()
     if checkReactorColour():
-        pyautogui.press("r")
+        click(1830,710)
+        time.sleep(0.5)
+        click(1000,500)
+        time.sleep(0.5)
+        click(1000,500)
+        time.sleep(0.5)
+        # click(1830,710)
+        # time.sleep(0.3)
         reactorRechage()
         time.sleep(0.3)
         pydirectinput.keyDown('shift')
@@ -150,4 +172,4 @@ def main(num,x):
     else :
         main_body()
 
-main(1,2)
+main(1,1)
