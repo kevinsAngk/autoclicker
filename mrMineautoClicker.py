@@ -102,6 +102,8 @@ def reactorRechage():
 def superminer():
     click(1830,290)
     time.sleep(0.8)
+    click(1260,280)
+    time.sleep(0.8)
     click(830,735)
     time.sleep(0.8)
     click(767,756)
@@ -109,8 +111,34 @@ def superminer():
     click(1200,175)
     time.sleep(0.8)
     click(1400,225)
-    time.sleep(0.5)
+    time.sleep(0.8)
 
+def tradingPost():
+    click(1830,350)
+    time.sleep(0.8)
+    click(850,590)
+    time.sleep(0.8)
+    click(1090,475)
+    time.sleep(0.8)
+    click(950,700)
+    time.sleep(0.3)
+    click(1830,650)
+    time.sleep(0.8)
+    click(850,590)
+    time.sleep(0.8)
+    click(1090,475)
+    time.sleep(0.8)
+    click(950,700)
+    time.sleep(0.3)
+    click(1830,750)
+    time.sleep(0.8)
+    click(850,590)
+    time.sleep(0.8)
+    click(1090,475)
+    time.sleep(0.8)
+    click(950,700)
+    time.sleep(0.3)
+    
 def main_body(x):
     colector(x)
     collect_wild_chest()
@@ -135,6 +163,7 @@ def main_body(x):
     pyautogui.press('esc')
     time.sleep(0.3)
     superminer()
+    tradingPost()
     if checkReactorColour():
         click(1830,710)
         time.sleep(0.5)
@@ -172,4 +201,4 @@ def main(num,x):
     else :
         main_body()
 
-main(1,1)
+main(1,2)
