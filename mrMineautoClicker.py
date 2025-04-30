@@ -116,7 +116,7 @@ def superminer():
 def tradingPost():
     click(1830,350)
     time.sleep(0.8)
-    click(850,590)
+    click(850,600)
     time.sleep(0.8)
     click(1090,475)
     time.sleep(0.8)
@@ -124,7 +124,7 @@ def tradingPost():
     time.sleep(0.3)
     click(1830,650)
     time.sleep(0.8)
-    click(850,590)
+    click(850,600)
     time.sleep(0.8)
     click(1090,475)
     time.sleep(0.8)
@@ -132,7 +132,7 @@ def tradingPost():
     time.sleep(0.3)
     click(1830,750)
     time.sleep(0.8)
-    click(850,590)
+    click(850,600)
     time.sleep(0.8)
     click(1090,475)
     time.sleep(0.8)
@@ -201,4 +201,4 @@ def main(num,x):
     else :
         main_body()
 
-main(1,2)
+main(1,1)
