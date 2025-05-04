@@ -14,6 +14,7 @@ def click(x,y):
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0)
     time.sleep(0.25)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,0,0)
+    time.sleep(0.25)
     
 
 def compressToEthernalChest():
@@ -195,4 +196,4 @@ def main(num,x):
     else :
         main_body()
 
-main(1,1)
+main(1,2)
