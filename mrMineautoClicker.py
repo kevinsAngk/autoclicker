@@ -92,13 +92,148 @@ def checkReactorColour():
 
     return False
 
-def reactorRechage():
+def reactorRechageGreen4Fuel():
+    pydirectinput.doubleClick(920,385)
+    time.sleep(0.8)
+    pydirectinput.doubleClick(745,675)
+    time.sleep(0.8)
+    
+    pydirectinput.doubleClick(920,450)
+    time.sleep(0.8)
+    pydirectinput.doubleClick(745,675)
+    time.sleep(0.8)
+    
+    pydirectinput.doubleClick(1175,385)
+    time.sleep(0.8)
+    pydirectinput.doubleClick(745,675)
+    time.sleep(0.8)
+    
+    pydirectinput.doubleClick(1175,450)
+    time.sleep(0.8)
+    pydirectinput.doubleClick(745,675)
+    time.sleep(0.8)
+    pass
+    pydirectinput.keyDown('shift')
+    time.sleep(0.3)
+    for p in range (5):
+        click(595,320)
+    pydirectinput.keyUp('shift')
+    time.sleep(0.3)
+
+def reactorRechageGreen5Fuel():
+    pydirectinput.doubleClick(920,455)
+    time.sleep(0.8)
+    pydirectinput.doubleClick(745,675)
+    time.sleep(0.8)
+    
+    pydirectinput.doubleClick(1240,455)
+    time.sleep(0.8)
+    pydirectinput.doubleClick(745,675)
+    time.sleep(0.8)
+    
+    pydirectinput.doubleClick(1050,575)
+    time.sleep(0.8)
+    pydirectinput.doubleClick(745,675)
+    time.sleep(0.8)
+    
+    pydirectinput.doubleClick(855,700)
+    time.sleep(0.8)
+    pydirectinput.doubleClick(745,675)
+    time.sleep(0.8)
+    
+    pydirectinput.doubleClick(1175,700)
+    time.sleep(0.8)
+    pydirectinput.doubleClick(745,675)
+    time.sleep(0.8)
+    pydirectinput.doubleClick(1175,700)
+    time.sleep(0.8)
+    pydirectinput.doubleClick(745,675)
+    time.sleep(0.8)
+    
+    pass
+    # pydirectinput.doubleClick(1060,890)
+    # time.sleep(0.8)
+    # pydirectinput.doubleClick(1000,480)
+    # time.sleep(0.8)
+    # pydirectinput.doubleClick(777,675)
+    # time.sleep(0.8)
+    pydirectinput.keyDown('shift')
+    time.sleep(0.3)
+    for p in range (6):
+        click(595,325)
+    pydirectinput.keyUp('shift')
+    time.sleep(0.3)
+
+def reactorRechagePurpleFuel():
+    pydirectinput.doubleClick(920,445)
+    time.sleep(0.8)
+    pydirectinput.doubleClick(745,675)
+    time.sleep(0.8)
+    
+    pydirectinput.doubleClick(920,695)
+    time.sleep(0.8)
+    pydirectinput.doubleClick(745,675)
+    time.sleep(0.8)
+    
+    pydirectinput.doubleClick(1175,445)
+    time.sleep(0.8)
+    pydirectinput.doubleClick(745,675)
+    time.sleep(0.8)
+    
+    pydirectinput.doubleClick(1175,695)
+    time.sleep(0.8)
+    pydirectinput.doubleClick(745,675)
+    time.sleep(0.8)
+    pass
+    # pydirectinput.doubleClick(1060,890)
+    # time.sleep(0.8)
+    # pydirectinput.doubleClick(1000,535)
+    # time.sleep(0.8)
+    # pydirectinput.doubleClick(777,675)
+    # time.sleep(0.8)
+    pydirectinput.keyDown('shift')
+    time.sleep(0.3)
+    for p in range (3):
+        click(660,325)
+    pydirectinput.keyUp('shift')
+    time.sleep(0.3)
+
+def reactorRechageGrayFuel():
+    pydirectinput.doubleClick(920,385)
+    time.sleep(0.8)
+    pydirectinput.doubleClick(745,675)
+    time.sleep(0.8)
+    pydirectinput.doubleClick(920,630)
+    time.sleep(0.8)
+    pydirectinput.doubleClick(745,675)
+    time.sleep(0.8)
+    pass
+    # pydirectinput.doubleClick(1060,890)
+    # time.sleep(0.8)
+    # pydirectinput.doubleClick(1000,590)
+    # time.sleep(0.8)
+    # pydirectinput.doubleClick(777,675)
+    # time.sleep(0.8)
+    pydirectinput.keyDown('shift')
+    time.sleep(0.3)
+    for p in range (3):
+        click(595,575)
+    pydirectinput.keyUp('shift')
+    time.sleep(0.3)
+    
+def reactorRechagePolonium():
     pydirectinput.doubleClick(1060,890)
     time.sleep(0.8)
     pydirectinput.doubleClick(1000,750)
     time.sleep(0.8)
     pydirectinput.doubleClick(777,675)
     time.sleep(0.8)
+    pydirectinput.keyDown('shift')
+    time.sleep(0.3)
+    for p in range (28):
+        click(660,575)
+    pydirectinput.keyUp('shift')
+    time.sleep(0.3)
 
 def superminer():
     click(1830,290)
@@ -120,8 +255,12 @@ def tradingPostStuff():
     click(1090,475)
     time.sleep(0.8)
     click(1098,545)
-    click(950,700)
-    time.sleep(0.3)
+    time.sleep(0.8)
+    click(1090,745)
+    time.sleep(0.8)
+    click(1098,715)
+    time.sleep(0.8)
+    
 
 def tradingPost():
     click(1830,350)
@@ -147,9 +286,9 @@ def main_body(x):
     time.sleep(0.3)
     pyautogui.press("b")
     time.sleep(0.4)
-    click(802,490)
-    time.sleep(0.3)
-    click(802,490)
+    pydirectinput.doubleClick(802,490)
+    time.sleep(0.5)
+    pydirectinput.doubleClick(802,490)
     time.sleep(0.5)
     click(1100,730)
     time.sleep(0.3)
@@ -160,22 +299,13 @@ def main_body(x):
     superminer()
     tradingPost()
     if checkReactorColour():
-        click(1830,710)
+        pydirectinput.doubleClick(1830,710)
         time.sleep(0.5)
-        click(1000,500)
-        time.sleep(0.5)
-        click(1000,500)
+        pydirectinput.doubleClick(1000,500)
         time.sleep(0.5)
         # click(1830,710)
         # time.sleep(0.3)
-        reactorRechage()
-        time.sleep(0.3)
-        pydirectinput.keyDown('shift')
-        time.sleep(0.3)
-        for p in range (28):
-            click(595,575)
-        pydirectinput.keyUp('shift')
-        time.sleep(0.3)
+        reactorRechageGreen5Fuel()
     
 # running = False 
 
