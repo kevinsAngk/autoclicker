@@ -224,13 +224,13 @@ def reactorRechageGrayFuel():
 def reactorRechagePolonium():
     pydirectinput.doubleClick(1060,890)
     time.sleep(0.8)
-    pydirectinput.doubleClick(1000,750)
+    pydirectinput.doubleClick(1000,800)
     time.sleep(0.8)
     pydirectinput.doubleClick(777,675)
     time.sleep(0.8)
     pydirectinput.keyDown('shift')
     time.sleep(0.3)
-    for p in range (28):
+    for p in range (33):
         click(660,575)
     pydirectinput.keyUp('shift')
     time.sleep(0.3)
@@ -305,7 +305,9 @@ def main_body(x):
         time.sleep(0.5)
         # click(1830,710)
         # time.sleep(0.3)
-        reactorRechageGreen5Fuel()
+        reactorRechagePolonium()
+    time.sleep(0.3)
+    pydirectinput.doubleClick(1751,993)
     
 # running = False 
 
