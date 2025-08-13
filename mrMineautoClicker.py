@@ -231,12 +231,14 @@ def reactorRechagePolonium():
     pydirectinput.keyDown('shift')
     time.sleep(0.3)
     for p in range (33):
-        click(660,575)
+        click(600,575)
     pydirectinput.keyUp('shift')
     time.sleep(0.3)
 
 def superminer():
     click(1830,290)
+    time.sleep(0.8)
+    click(1260,280)
     time.sleep(0.8)
     click(1260,280)
     time.sleep(0.8)
@@ -274,6 +276,10 @@ def tradingPost():
     tradingPostStuff()
     
 def main_body(x):
+    click(770,645)
+    time.sleep(0.5)
+    pydirectinput.doubleClick(1860,990)
+    time.sleep(0.8)
     colector(x)
     collect_wild_chest()
     sell_material()
@@ -298,17 +304,20 @@ def main_body(x):
     time.sleep(0.3)
     superminer()
     tradingPost()
-    if checkReactorColour():
-        pydirectinput.doubleClick(1830,710)
-        time.sleep(0.5)
-        pydirectinput.doubleClick(1000,500)
-        time.sleep(0.5)
-        # click(1830,710)
-        # time.sleep(0.3)
-        reactorRechagePolonium()
+    # if checkReactorColour():
+    #     pydirectinput.doubleClick(1830,710)
+    #     time.sleep(0.5)
+    #     pydirectinput.doubleClick(1000,500)
+    #     time.sleep(0.5)
+    #     # click(1830,710)
+    #     # time.sleep(0.3)
+    #     reactorRechagePolonium()
     time.sleep(0.3)
     pydirectinput.doubleClick(1751,993)
-    
+    time.sleep(0.8)
+    # CLICK CAT
+    pydirectinput.doubleClick(1860,990)
+    time.sleep(0.8)
 # running = False 
 
 # def toggle_clicker():
@@ -328,4 +337,4 @@ def main(num,x):
     else :
         main_body()
 
-main(1,2)
+main(1,1)
